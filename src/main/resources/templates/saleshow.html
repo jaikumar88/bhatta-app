@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Bricks Udhyog</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
+    <h2>Customer Details</h2>
+        <div>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Sale Id:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${sale.id}">Sale Id</p></div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Party Name:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${sale.partyName}">Party Name</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Brick Type:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${sale.brickType}">Brick Type</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Receipt No:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${sale.receiptNo}">Receipt No</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Mobile:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${sale.mobile}">Mobile</p>
+                    </div>
+                </div>
+            </form>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Bricks Udhyog</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <div th:if="${not #lists.isEmpty(sales)}">
+        <h2>Sale List</h2>
+        <table class="table table-striped">
+            <tr>
+                
+                <th>Party Name</th>
+                <th>Brick Type</th>
+                <th>Receipt No</th>
+                <th>Mobile</th>
+                <th>View</th>
+                <th>Edit</th>
+            </tr>
+            <tr th:each="sale : ${sales}">
+                <td th:text="${sale.partyName}">Party Name</td>
+                <td th:text="${sale.brickType}">Brick Type</td>
+                <td th:text="${sale.receiptNo}">Receipt No</td>
+                <td th:text="${sale.mobile}">Mobile</td>
+                <td><a th:href="${ '/sale/' + sale.id}">View</a></td>
+                <td><a th:href="${'/sale/edit/' + sale.id}">Edit</a></td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+
+</body>
+</html>
